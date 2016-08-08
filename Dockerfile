@@ -10,8 +10,7 @@ RUN set -x \
     && sudo sh ./datatorrent-rts.bin \
     && sudo rm ./datatorrent-rts.bin \
     && curl -LO http://www.eu.apache.org/dist/hadoop/common/hadoop-2.6.4/hadoop-2.6.4.tar.gz | tar -xz -C /opt \
-    && cd /opt \
-    && ln -s ./hadoop-2.6.4 hadoop
+    && ln -s /opt/hadoop-2.6.4 /opt/hadoop
 
 ENV DATATORRENT_HOME=/opt/datatorrent/current
 ENV HADOOP_PREFIX /opt/hadoop
