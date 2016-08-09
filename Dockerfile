@@ -9,7 +9,7 @@ RUN set -x \
     && curl -LsSO https://www.datatorrent.com/downloads/datatorrent-rts.bin \
     && sudo sh ./datatorrent-rts.bin \
     && sudo rm ./datatorrent-rts.bin \
-    && curl -LsSO http://www.eu.apache.org/dist/hadoop/common/hadoop-2.6.4/hadoop-2.6.4.tar.gz | tar -xz -C /opt \
+    && curl -Ls http://www.eu.apache.org/dist/hadoop/common/hadoop-2.6.4/hadoop-2.6.4.tar.gz | tar -xz -C /opt \
     && ln -s /opt/hadoop-2.6.4 /opt/hadoop
 
 ENV DATATORRENT_HOME=/opt/datatorrent/current
