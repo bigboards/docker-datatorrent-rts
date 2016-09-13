@@ -16,4 +16,4 @@ export SQOOP_HOME=/opt/sqoop
 export PIG_HOME=/opt/pig
 export PATH=${PATH}:${DATATORRENT_HOME}/bin:${PIG_HOME}/bin:${SQOOP_HOME}/bin:${HADOOP_HOME}/bin
 
-sudo -E dtgateway start -f
+sudo -Eu dtadmin dtgateway start -f
