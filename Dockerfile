@@ -7,7 +7,7 @@ ENV DATATORRENT_VERSION 3.4.0
 
 RUN set -x \
     && curl -LSO https://www.datatorrent.com/downloads/datatorrent-rts.bin \
-    && sudo sh ./datatorrent-rts.bin \
+    && sudo sh ./datatorrent-rts.bin -U root -G root \
     && sudo rm ./datatorrent-rts.bin \
     && curl -Ls http://www.eu.apache.org/dist/hadoop/common/hadoop-2.6.4/hadoop-2.6.4.tar.gz | tar -xz -C /opt \
     && ln -s /opt/hadoop-2.6.4 /opt/hadoop
